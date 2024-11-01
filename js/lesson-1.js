@@ -14,3 +14,18 @@ const userName = prompt("Введіть ваше ім'я:");
 if (userName) {
   alert(`Привіт, ${userName}!`);
 }
+
+let confirmData = confirm("Ты человек?");
+if (confirmData == true) {
+  alert("Дякую за підтвердження!");
+} else if (confirmData == false) {
+  alert("Дію відмінено!");
+}
+
+alert("Warning, need to confirm your actions");
+let isTrue = confirm("Are you confirm your actions?");
+if (isTrue == true) {
+  alert("Дякую за підтвердження!");
+} else if (isTrue == false) {
+  alert("Дію відмінено!");
+}
