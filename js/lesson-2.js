@@ -26,5 +26,7 @@ console.log(Number.parseInt(cow));
 let fish = 4;
 console.log(Math.sqrt(fish));
 
-let cool = "221";
-console.log(toString() + parseInt(cool));
+const cool = 20;
+const cool_2 = "10";
+console.log(cool.toString());
+console.log(parseInt(cool_2));
