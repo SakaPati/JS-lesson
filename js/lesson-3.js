@@ -10,7 +10,7 @@ const fullName = string_1 + string_2 + string_3 + "Viktor";
 console.log(fullName);
 // 2
 const email = "karatygad@gmail.com"
-console.log(email.indexOf("@"));
+console.log(email.includes("@"));
 console.log("Кількість символів: " + email.length);
 // 3
 const userName = "Den4k"
