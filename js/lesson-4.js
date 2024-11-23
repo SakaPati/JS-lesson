@@ -1,5 +1,14 @@
 // 1
+const str1 = prompt("Ведіть текст");
+const str2 = prompt("Ведіть текст");
 
+const filledStr1 = str1.length > 0 && str2.length > 0;
+
+if (filledStr1) {
+    alert("Обидва поля заповнені");
+} else {
+    alert("Не всі поля заповнені");
+}
 
 // 2
 const number = 100;
@@ -28,7 +37,9 @@ if (numb >= 10 && numb <= 20) {
 // 5
 const userName = prompt("Ім'я");
 const email = prompt("email");
-const pass = prompt("Пароль")
-if (userName.length >= 3 && email.includes("@") && email.includes(".") && pass.length > 6) {
-    alert("Неправильно написано имя, почта или пароль")
-} else { alert("Все правильно")}
+const pass = prompt("Пароль");
+if (userName.length >= 3 && email.includes("@.") && pass.length >= 6) {
+  alert("Все правильно");
+} else {
+  alert("Неправильно написано имя, почта или пароль");
+}
