@@ -20,7 +20,7 @@ switch (drink) {
 
 // 2
 let days = prompt("Напишіть день тижня");
-  
+
 switch (days) {
   case "Субота":
     alert("Вихідний");
@@ -74,16 +74,16 @@ switch (emountDays) {
   case 8:
   case 10:
   case 12:
-    alert("В цьому місяці 31 дней");
+    alert("В цьому місяці 31 день");
     break;
   case 4:
   case 6:
   case 9:
   case 11:
-    alert("В цьому місяці 30 дней");
+    alert("В цьому місяці 30 день");
     break;
   case 2:
-    alert("В цьому місяці у нас тільки 28 днів");
+    alert("В цьому місяці у нас тільки 28 день");
     break;
   default:
     alert("Такого місяця немае");
@@ -91,22 +91,27 @@ switch (emountDays) {
 }
 
 // 5
-let color = prompt("Введіть колір").toLowerCase()
+// Я тут ещё урезал код просто заместь else{ color = color.toLowerCase()} написал просто color = color.toLowerCase()
+let color = prompt("Введіть колір");
+if (color === null) {
+  color = prompt("Це поле повинно бути заповнене, введить колир");
+}
+color = color.toLowerCase();
 
 switch (color) {
-    case "червоний":
-        alert("Stop")
-        break;
-    case "жовтий":
-        alert("Wait")
-        break;
-    case "зелений":
-        alert("Running");
-        break;
-    
-    default:
-        alert("Я не придумал действие для этого цвета")
-        break;
+  case "червоний":
+    alert("Stop");
+    break;
+  case "жовтий":
+    alert("Wait");
+    break;
+  case "зелений":
+    alert("Running");
+    break;
+
+  default:
+    alert("Я не придумал действие для этого цвета");
+    break;
 }
 
 // 6
