@@ -4,9 +4,10 @@ const friends = ["Alex", "Denis", "Maksim"];
 let string = '';
 
 for (let i = 0; i < friends.length; i++) {
-    const a = friends.join(", ")
-    console.log(a);
-};``
+    string += friends[i];
+};
+const result = friends.join(", ")
+console.log(result);
 
 // 2
 const cards = [
