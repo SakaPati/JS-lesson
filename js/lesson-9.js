@@ -27,15 +27,39 @@
 
 // 4
 
-const formatString = function(string) {
-    let str ='';
-    string = Array.from(arguments);
-    if(string[0].length > 40){
-       let limiters = string[0].slice(0, 40)
-        str += limiters
-        str += "..."
-    } else{str += string};
-   return str;
-};
+// const formatString = function(string) {
+//     let str ='';
+//     string = Array.from(arguments);
+//     if(string[0].length > 40){
+//        let limiters = string[0].slice(0, 40)
+//         str += limiters + "..."
+//     } else{str += string};
+//    return str;
+// };
 
-console.log(formatString(prompt("Введите слова")));
+// console.log(formatString(prompt("Введите слова")));
+
+// 6
+
+let input = prompt("Введить число"), numbers = [], total = 0;
+const parseInput = Number.parseInt(input);
+numbers.push(parseInput);
+
+
+if(input !== null){
+    for(let i = 0; i < 1000; i++){
+        if(input === null){
+            numbers.pop();
+            for(let i = 0; i < numbers.length; i++){ 
+                total += numbers[i];
+            };
+
+            break;
+        }else{ 
+            input = prompt("Введить число");
+            const parseInpute = Number.parseInt(input);
+            numbers.push(parseInpute);
+        };
+    };
+}
+console.log(`Загальна сума чисел дорівнює: ${total}`);
