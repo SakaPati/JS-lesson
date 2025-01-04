@@ -38,6 +38,7 @@ const findLongestWord = function(string){
 };
 
 const result = findLongestWord(prompt("Введите слова"));
+console.log(result);
 
 // 4
 
