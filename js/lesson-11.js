@@ -1,26 +1,25 @@
 // 1
+const buttonDeposit = document.querySelector(".deposit");
+const buttonWithdraw = document.querySelector(".withdraw");
+let money = parseInt(prompt("Введить сумму поповнення"));
 const bankAccount = {
     ownerName: "Denis",
     accountNumber: 922453,
-    balance: 1000
+    balance: 1000,
+    addMoney(money) {
+        this.balance += money;
+        console.log(`Остатки на счете: ${this.balance}`);
+    },
+    remoteMoney(money) {
+        if(this.balance >= money){
+            this.balance -= money;
+            console.log(`Остатки на счете: ${this.balance}`);
+        }else{console.log("Недостаточно грошей");};
+     }
 };
 
-const buttonDeposit = document.querySelector(".deposit");
-const buttonWithdraw = document.querySelector(".withdraw");
-
-const addMoney = () => {
-    let money = prompt("Введить сумму поповнення"), parsePrompt = parseInt(money);
-    let newBalance = bankAccount.balance += parsePrompt;
-    console.log(newBalance);
-};
-
-const remoteMoney = () => {
-    let money = prompt("Введить сумму зняття"), parsePrompt = parseInt(money);
-    let newBalance = bankAccount.balance -= parsePrompt;
-    console.log(newBalance);
-};
-buttonDeposit.addEventListener("click", addMoney);
-buttonWithdraw.addEventListener("click", remoteMoney);
+bankAccount.addMoney(1000);
+bankAccount.remoteMoney(200);
 
 // 2
 const weather = {
@@ -32,7 +31,7 @@ const weather = {
 
 window.saveAndShowValue = function () {
     const inputElement = document.getElementById('myInput');
-    const value = inputElement.value; // значение инпута
+    const value = inputElement.value;
 
     if(value >= weather.temperature){
         alert("Температура вище 0 градусів Цельсія")
